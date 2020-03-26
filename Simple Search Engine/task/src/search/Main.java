@@ -7,56 +7,95 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        SearchEngine search = new SearchEngine();
+        search.start();
+    }
+}
 
-        Scanner scanner = new Scanner(System.in);
+class SearchEngine {
+
+    private ArrayList<String> people;
+    private Scanner scanner;
+    private boolean searchIsWorking;
+
+    SearchEngine() {
+        people = new ArrayList<>();
+        scanner = new Scanner(System.in);
+        searchIsWorking = true;
+    }
+
+    public void start() {
+        addPeople();
+
+        while (searchIsWorking) {
+            showMenu();
+
+            int option = Integer.parseInt(scanner.nextLine());
+
+            switch (option) {
+                case 1:
+                    findPerson();
+                    break;
+                case 2:
+                    printAllPeople();
+                    break;
+                case 0:
+                    exit();
+                    break;
+                default:
+                    System.out.println("Incorrect option! Try again.");
+            }
+        }
+    }
+
+    private void addPeople() {
 
         System.out.println("Enter the number of people:");
         int numberOfPeople = Integer.parseInt(scanner.nextLine());
-
-        ArrayList<String> people = new ArrayList<>();
 
         System.out.println("Enter all people:");
         for (int i = 0; i < numberOfPeople; i++) {
             people.add(scanner.nextLine());
         }
 
-        System.out.println("\nEnter the number of search queries:");
-        int numberOfSearch = Integer.parseInt(scanner.nextLine());
+    }
 
-        for (int i = 0; i < numberOfSearch; i++) {
-            System.out.println("\nEnter data to search people:");
-            String dataToSearch = scanner.nextLine().trim().toLowerCase();
+    private void showMenu() {
+        System.out.println("=== Menu ===");
+        System.out.println("1. Find a person");
+        System.out.println("2. Print all people");
+        System.out.println("0. Exit");
+    }
 
-            ArrayList<String> foundPeople = new ArrayList<>();
+    private void findPerson() {
+        System.out.println("\n" +
+                "Enter a name or email to search all suitable people.");
+        String dataToSearch = scanner.nextLine().trim().toLowerCase();
 
-            for (String person : people) {
+        ArrayList<String> foundPeople = new ArrayList<>();
 
-//                String[] words = person.trim().toLowerCase().split("\\s+");
-//
-//                for (String word : words) {
-//                    if (dataToSearch.equals(word)) {
-//                        foundPeople.add(person);
-//                        break;
-//                    }
-//                }
-
-                if (person.trim().toLowerCase().contains(dataToSearch)) foundPeople.add(person);
-
-            }
-
-            if (!foundPeople.isEmpty()) {
-                System.out.println("Found people:");
-                for (String foundPerson : foundPeople) {
-                    System.out.println(foundPerson);
-                }
-            } else {
-                System.out.println("No matching people found.");
-            }
+        for (String person : people) {
+            if (person.trim().toLowerCase().contains(dataToSearch)) foundPeople.add(person);
         }
 
+        if (!foundPeople.isEmpty()) {
+            for (String foundPerson : foundPeople) {
+                System.out.println(foundPerson);
+            }
+        } else {
+            System.out.println("No matching people found.");
+        }
+    }
 
+    private void printAllPeople() {
+        System.out.println("=== List of people ===");
+        for (String person : people) {
+            System.out.println(person);
+        }
+    }
 
-
-
+    private void exit() {
+        searchIsWorking = false;
+        System.out.println("Bye!");
     }
 }

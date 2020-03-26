@@ -1,53 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SimpleSearchEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-25T14:05:08" hostname="GopherPC" time="0.068">
+<testsuite name="SimpleSearchEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-26T06:17:19" hostname="GopherPC" time="0.121">
   <properties/>
-  <testcase name="start" classname="SimpleSearchEngineTest" time="0.068"/>
+  <testcase name="start" classname="SimpleSearchEngineTest" time="0.121"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 Enter the number of people:
->1
+>6
 Enter all people:
->John
-
-Enter the number of search queries:
->1
-
-Enter data to search people:
->this text will definitely be no match
-No matching people found.
+>Dwight Joseph djo@gmail.com
+>Rene Webb webb@gmail.com
+>Katie Jacobs
+>Erick Harrington harrington@gmail.com
+>Myrtle Medina
+>Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>2
+=== List of people ===
+Dwight Joseph djo@gmail.com
+Rene Webb webb@gmail.com
+Katie Jacobs
+Erick Harrington harrington@gmail.com
+Myrtle Medina
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>0
+Bye!
 ?[1;31m
 Start test 2?[0m
 Enter the number of people:
->3
+>6
 Enter all people:
->john smith smith@gmail.com
->John lock john_lock@somecompany.com
->help me iamaprogrammer@gmail.com
+>Dwight Joseph djo@gmail.com
+>Rene Webb webb@gmail.com
+>Katie Jacobs
+>Erick Harrington harrington@gmail.com
+>Myrtle Medina
+>Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>1
 
-Enter the number of search queries:
->4
+Enter a name or email to search all suitable people.
+>burgess
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>0
+Bye!
+?[1;31m
+Start test 3?[0m
+Enter the number of people:
+>6
+Enter all people:
+>Dwight Joseph djo@gmail.com
+>Rene Webb webb@gmail.com
+>Katie Jacobs
+>Erick Harrington harrington@gmail.com
+>Myrtle Medina
+>Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>1
 
-Enter data to search people:
->john
-Found people:
-john smith smith@gmail.com
-John lock john_lock@somecompany.com
+Enter a name or email to search all suitable people.
+>erick
+Erick Harrington harrington@gmail.com
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>0
+Bye!
+?[1;31m
+Start test 4?[0m
+Enter the number of people:
+>6
+Enter all people:
+>Dwight Joseph djo@gmail.com
+>Rene Webb webb@gmail.com
+>Katie Jacobs
+>Erick Harrington harrington@gmail.com
+>Myrtle Medina
+>Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>3
+Incorrect option! Try again.
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>1
 
-Enter data to search people:
->Somecompany
-Found people:
-John lock john_lock@somecompany.com
+Enter a name or email to search all suitable people.
+>burgess
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>2
+=== List of people ===
+Dwight Joseph djo@gmail.com
+Rene Webb webb@gmail.com
+Katie Jacobs
+Erick Harrington harrington@gmail.com
+Myrtle Medina
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>2
+=== List of people ===
+Dwight Joseph djo@gmail.com
+Rene Webb webb@gmail.com
+Katie Jacobs
+Erick Harrington harrington@gmail.com
+Myrtle Medina
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>1
 
-Enter data to search people:
+Enter a name or email to search all suitable people.
+>erick
+Erick Harrington harrington@gmail.com
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>0
+Bye!
+?[1;31m
+Start test 5?[0m
+Enter the number of people:
+>6
+Enter all people:
+>Dwight Joseph djo@gmail.com
+>Rene Webb webb@gmail.com
+>Katie Jacobs
+>Erick Harrington harrington@gmail.com
+>Myrtle Medina
+>Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>2
+=== List of people ===
+Dwight Joseph djo@gmail.com
+Rene Webb webb@gmail.com
+Katie Jacobs
+Erick Harrington harrington@gmail.com
+Myrtle Medina
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>1
+
+Enter a name or email to search all suitable people.
 >@
-Found people:
-john smith smith@gmail.com
-John lock john_lock@somecompany.com
-help me iamaprogrammer@gmail.com
+Dwight Joseph djo@gmail.com
+Rene Webb webb@gmail.com
+Erick Harrington harrington@gmail.com
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>1
 
-Enter data to search people:
->this text will definitely be no match
+Enter a name or email to search all suitable people.
+>this text never find some match
 No matching people found.
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>2
+=== List of people ===
+Dwight Joseph djo@gmail.com
+Rene Webb webb@gmail.com
+Katie Jacobs
+Erick Harrington harrington@gmail.com
+Myrtle Medina
+Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>0
+Bye!
+?[1;31m
+Start test 6?[0m
+Enter the number of people:
+>6
+Enter all people:
+>Dwight Joseph djo@gmail.com
+>Rene Webb webb@gmail.com
+>Katie Jacobs
+>Erick Harrington harrington@gmail.com
+>Myrtle Medina
+>Erick Burgess
+=== Menu ===
+1. Find a person
+2. Print all people
+0. Exit
+>0
+Bye!
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
