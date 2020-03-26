@@ -3,6 +3,8 @@ package search;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -29,11 +31,13 @@ class SearchEngine {
     private ArrayList<String> people;
     private Scanner scanner;
     private boolean searchIsWorking;
+    private Map<String, ArrayList<Integer>> mapIndex;
 
     SearchEngine() {
         people = new ArrayList<>();
         scanner = new Scanner(System.in);
         searchIsWorking = true;
+        mapIndex = new HashMap<>();
     }
 
     SearchEngine(String pathData) {
@@ -78,9 +82,27 @@ class SearchEngine {
 
         System.out.println("Enter all people:");
         for (int i = 0; i < numberOfPeople; i++) {
-            people.add(scanner.nextLine());
+            String person = scanner.nextLine();
+            addOnePerson(person);
         }
 
+    }
+
+    private void addOnePerson(String person) {
+        people.add(person);
+
+        String[] wordsOfPerson = person.toLowerCase().split("\\s+");
+        for (String word : wordsOfPerson) {
+            ArrayList<Integer> indexPerson;
+
+            if (mapIndex.containsKey(word)) indexPerson = mapIndex.get(word);
+            else indexPerson = new ArrayList<>();
+
+            indexPerson.add(people.indexOf(person));
+
+            mapIndex.put(word, indexPerson);
+
+        }
     }
 
     private void showMenu() {
@@ -95,19 +117,15 @@ class SearchEngine {
                 "Enter a name or email to search all suitable people.");
         String dataToSearch = scanner.nextLine().trim().toLowerCase();
 
-        ArrayList<String> foundPeople = new ArrayList<>();
+        if (mapIndex.containsKey(dataToSearch)) {
+            ArrayList<Integer> indexWord = mapIndex.get(dataToSearch);
+            System.out.println(indexWord.size() + "person found:");
 
-        for (String person : people) {
-            if (person.trim().toLowerCase().contains(dataToSearch)) foundPeople.add(person);
-        }
-
-        if (!foundPeople.isEmpty()) {
-            for (String foundPerson : foundPeople) {
-                System.out.println(foundPerson);
+            for (Integer index : indexWord) {
+                System.out.println(people.get(index));
             }
-        } else {
-            System.out.println("No matching people found.");
-        }
+        } else System.out.println("No matching people found.");
+
     }
 
     private void printAllPeople() {
@@ -127,7 +145,8 @@ class SearchEngine {
 
         try (Scanner scannerFile = new Scanner(file)) {
             while (scannerFile.hasNext()) {
-                people.add(scannerFile.nextLine());
+                String person = scannerFile.nextLine();
+                addOnePerson(person);
             }
         } catch (FileNotFoundException e) {
             System.out.println("No file found: " + pathData);
