@@ -2,8 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="Problems-Companies_main" target="11" />
+      <module name="Problems-Companies_test" target="11" />
+      <module name="Problems-Decrement_all_main" target="11" />
+      <module name="Problems-Decrement_all_test" target="11" />
       <module name="Problems-Does_the_array_contain_the_element_main" target="11" />
       <module name="Problems-Does_the_array_contain_the_element_test" target="11" />
+      <module name="Problems-Greek_letters_main" target="11" />
+      <module name="Problems-Greek_letters_test" target="11" />
+      <module name="Problems-Split_a_list_into_sublists_main" target="11" />
+      <module name="Problems-Split_a_list_into_sublists_test" target="11" />
       <module name="Problems-The_first_occurrence_in_the_subarray_main" target="11" />
       <module name="Problems-The_first_occurrence_in_the_subarray_test" target="11" />
       <module name="Problems-The_index_of_the_last_occurrence_main" target="11" />
