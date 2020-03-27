@@ -20,6 +20,10 @@
       <module name="Problems-Shape_hierarchy_test" target="11" />
       <module name="Problems-Split_a_list_into_sublists_main" target="11" />
       <module name="Problems-Split_a_list_into_sublists_test" target="11" />
+      <module name="Problems-Template_Method__1__main" target="11" />
+      <module name="Problems-Template_Method__1__test" target="11" />
+      <module name="Problems-Template_Method_main" target="11" />
+      <module name="Problems-Template_Method_test" target="11" />
       <module name="Problems-The_first_occurrence_in_the_subarray_main" target="11" />
       <module name="Problems-The_first_occurrence_in_the_subarray_test" target="11" />
       <module name="Problems-The_index_of_the_last_occurrence_main" target="11" />
