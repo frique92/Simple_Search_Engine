@@ -12,6 +12,10 @@
       <module name="Problems-Greek_letters_test" target="11" />
       <module name="Problems-IntBinaryOperation_main" target="11" />
       <module name="Problems-IntBinaryOperation_test" target="11" />
+      <module name="Problems-Max_and_Min_main" target="11" />
+      <module name="Problems-Max_and_Min_test" target="11" />
+      <module name="Problems-Pick_your_team_main" target="11" />
+      <module name="Problems-Pick_your_team_test" target="11" />
       <module name="Problems-Shape_hierarchy_main" target="11" />
       <module name="Problems-Shape_hierarchy_test" target="11" />
       <module name="Problems-Split_a_list_into_sublists_main" target="11" />
