@@ -28,6 +28,10 @@
       <module name="Problems-The_first_occurrence_in_the_subarray_test" target="11" />
       <module name="Problems-The_index_of_the_last_occurrence_main" target="11" />
       <module name="Problems-The_index_of_the_last_occurrence_test" target="11" />
+      <module name="Problems-The_longest_ascending_sequence_main" target="11" />
+      <module name="Problems-The_longest_ascending_sequence_test" target="11" />
+      <module name="Problems-The_sum_of_digits_main" target="11" />
+      <module name="Problems-The_sum_of_digits_test" target="11" />
       <module name="Problems-Users_and_WebSites_main" target="11" />
       <module name="Problems-Users_and_WebSites_test" target="11" />
       <module name="Simple_Search_Engine-task_main" target="11" />
